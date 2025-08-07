@@ -1,68 +1,169 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Fondo psicodélico animado */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(270deg, #fcbf49, #f77f00, #d62828, #eae2b7);
+  background-size: 800% 800%;
+  animation: fondoMovimiento 30s ease infinite;
+  color: #2d1e2f;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Animación de fondo */
+@keyframes fondoMovimiento {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Títulos */
+h1, h2, h3 {
+  color: #4c0027;
+  text-align: center;
+  text-shadow: 2px 2px #ffc8dd;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 245, 235, 0.8);
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(76, 0, 39, 0.4);
+}
+
+/* Tarjetas de eventos */
+.card {
+  background: #ffe0ac;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px #a47148;
+  color: #1d1a05;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Botones hippies */
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn-primary {
+  background: #d62828;
+  color: #fffaf0;
+}
+
+.btn-primary:hover {
+  background: #a4133c;
+}
+
+.btn-success {
+  background: #40916c;
+  color: #fffaf0;
+}
+
+.btn-success:hover {
+  background: #2d6a4f;
+}
+
+.btn-danger {
+  background: #720026;
+  color: #fffaf0;
+}
+
+.btn-danger:hover {
+  background: #4c0013;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: #fff;
+  color: #a4133c;
+}
+
+/* Formularios hippies */
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 2px solid #d62828;
+  font-size: 1rem;
+  background-color: #fffaf0;
+  color: #3e1f47;
+}
+
+form label {
+  font-weight: bold;
+  color: #720026;
+}
+
+/* Alertas */
+.alert {
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert-danger {
+  background-color: #ffccd5;
+  color: #6a040f;
+}
+
+.alert-success {
+  background-color: #d8f3dc;
+  color: #2d6a4f;
+}
+
+.alert-info {
+  background-color: #caffbf;
+  color: #386641;
+}
+
+/* Navbar hippie */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6a4c93;
+  padding: 10px 30px;
+  border-bottom: 4px double #fcbf49;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fffaf0;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffe066;
+}
+
+.navbar .btn {
+  margin-left: 15px;
 }
